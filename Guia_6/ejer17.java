@@ -17,35 +17,31 @@ public class ejer17 {
     }
 
     public static void calcularDigitos(int[] vector, int tamaño) {
-        int digito = 0;
-        int digito1 = 0;
-        int digito2 = 0;
-        int digito3 = 0;
-        int digito4 = 0;
-        int digito5 = 0;
+        int[] digito = new int[5];
+        int cantDigito = 0;
         for (int i = 0; i < tamaño; i++) {
             int numeroVector = vector[i];
             while (numeroVector > 9) {
                 numeroVector = numeroVector / 10;
-                digito++;
+                cantDigito++;
             }
             if (vector[i] <= 9) {
-                digito1++;
-            } else if (digito == 1) {
-                digito2 ++;
-                digito = 0;
-            } else if (digito == 2) {
-                digito3 ++;
-                digito = 0;
-            } else if (digito == 3) {
-                digito4 ++;
-                digito = 0;
-            } else if (digito == 4) {
-                digito5 ++;
-                digito = 0;
+                digito[0] += 1;
+            } else if (cantDigito == 1) {
+                digito[1] += 1;
+                cantDigito = 0;
+            } else if (cantDigito == 2) {
+                digito[2] += 1;
+                cantDigito = 0;
+            } else if (cantDigito == 3) {
+                digito[3] += 1;
+                cantDigito = 0;
+            } else if (cantDigito == 4) {
+              digito[4] += 1;
+                cantDigito = 0;
             }
         }
-        System.out.println("La cantidad de numero de un digito es " + digito1 + ", de dos digitos " + digito2 + ", de tres digitos " + digito3 + ", de cuatro digitos " + digito4 + " y de cinco digitos " + digito5 + ".");
+        System.out.println("La cantidad de numero de un digito es " + digito[0] + ", de dos digitos " + digito[1] + ", de tres digitos " + digito[2] + ", de cuatro digitos " + digito[3] + " y de cinco digitos " + digito[4] + ".");
     }
 
 }

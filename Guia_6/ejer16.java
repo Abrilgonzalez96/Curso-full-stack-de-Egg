@@ -16,15 +16,15 @@ public class ejer16 {
         int numero = leer.nextInt();
         LlamarFuncion.crearVectorAleatorio(vector, tamañoVector, 10);
         LlamarFuncion.escribirVector(vector, tamañoVector);
-        encontrarNumero(vector, tamañoVector, numero);
+        encontrarNumero(vector, numero);
     }
 
-    public static void encontrarNumero(int[] arreglo, int tamaño, int numero) {
+    public static void encontrarNumero(int[] arreglo, int numero) {
         int posicion = 0;
         int numeroDeVeces = 0;
-        for (int i = 0; i < tamaño; i++) {
+        for (int i = 0; i < arreglo.length; i++) {
             if (arreglo[i] == numero) {
-                posicion = i;
+                posicion = i + 1;
                 numeroDeVeces += 1;
             }
         }

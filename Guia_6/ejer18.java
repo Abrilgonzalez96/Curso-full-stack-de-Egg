@@ -13,6 +13,7 @@ public class ejer18 {
         LlamarFuncion.escribirMatriz(matriz, tamañoMatriz, tamañoMatriz);
         System.out.println("Matriz transpuesta");
         crearMatrizTrans(matriz, tamañoMatriz);
+        System.out.println(matriz.length);
     }
 
     public static void crearMatrizTrans(int[][] arreglo, int tamaño) {

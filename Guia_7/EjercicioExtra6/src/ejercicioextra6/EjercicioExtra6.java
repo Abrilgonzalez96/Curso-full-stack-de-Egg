@@ -69,7 +69,7 @@ public class EjercicioExtra6 {
         ServiciosAhorcado sa = new ServiciosAhorcado();
         Ahorcado a = new Ahorcado();
         Ahorcado j1 = sa.crearJuego(a);
-
+        System.out.println("");
         while (sa.juego(a) == false) {
             sa.juego(a);
         }
